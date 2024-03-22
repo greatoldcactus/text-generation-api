@@ -11,6 +11,6 @@ type LLMApi interface {
 	ClearHistory()
 	GetHistory() (History, error)
 
-	SetSettings(APISettings any) error
-	GetSettings(APISettigs any) error
+	SetSetting(setting string, val string) error
+	GetSetting(setting string) (string, error)
 }

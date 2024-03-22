@@ -1,4 +1,4 @@
-package api
+package textgenerationapi
 
 type Message struct {
 	AuthorName string

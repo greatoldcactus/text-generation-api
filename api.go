@@ -1,4 +1,4 @@
-package api
+package textgenerationapi
 
 type LLMApi interface {
 	AddMessage(msg Message) error

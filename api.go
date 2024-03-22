@@ -7,6 +7,8 @@ type LLMApi interface {
 	Continue(msg string) (string, error)
 	//resulting message will not be appended to history
 	Generate() (string, error)
+	//answer one message
+	Answer(msg Message) (string, error)
 
 	ClearHistory()
 	GetHistory() (History, error)

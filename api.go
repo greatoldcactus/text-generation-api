@@ -1,17 +1,17 @@
 package textgenerationapi
 
 type LLMApi interface {
-	AddMessage(msg Message) error
 
-	//Continue message
-	Continue(msg string) (string, error)
+	//Continue message without using history
+	Continue(msg Message) (string, error)
 	//resulting message will not be appended to history
-	Generate() (string, error)
-	//answer one message
+	Generate(history History) (string, error)
+	//answer to one message without using history
 	Answer(msg Message) (string, error)
 
-	ClearHistory()
-	GetHistory() (History, error)
+	// AddMessage(msg Message) error
+	// ClearHistory()
+	// GetHistory() (History, error)
 
 	SetSetting(setting string, val string) error
 	GetSetting(setting string) (string, error)

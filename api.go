@@ -3,11 +3,11 @@ package textgenerationapi
 type LLMApi interface {
 
 	//Continue message without using history
-	Continue(msg Message) (string, error)
+	Continue(msg Message) (Message, error)
 	//resulting message will not be appended to history
-	Generate(history History) (string, error)
+	Generate(history History) (Message, error)
 	//answer to one message without using history
-	Answer(msg Message) (string, error)
+	Answer(msg Message) (Message, error)
 
 	// AddMessage(msg Message) error
 	// ClearHistory()

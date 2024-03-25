@@ -16,3 +16,9 @@ type LLMApi interface {
 	SetSetting(setting string, val string) error
 	GetSetting(setting string) (string, error)
 }
+
+type LLMApiModels interface {
+	ListModels() []string
+	SetModel(model string) error
+	GetModel() string
+}

@@ -18,7 +18,7 @@ type LLMApi interface {
 }
 
 type LLMApiModels interface {
-	ListModels() []string
+	ListModels() (models []string, err error)
 	SetModel(model string) error
 	GetModel() string
 }

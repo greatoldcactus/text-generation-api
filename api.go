@@ -15,6 +15,9 @@ type LLMApi interface {
 
 	SetSetting(setting string, val string) error
 	GetSetting(setting string) (string, error)
+
+	SetAnswerTokens(tokens int) error
+	GetAnswerTokens() int
 }
 
 type LLMApiModels interface {

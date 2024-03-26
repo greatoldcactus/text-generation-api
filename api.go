@@ -25,3 +25,9 @@ type LLMApiModels interface {
 	SetModel(model string) error
 	GetModel() string
 }
+
+type LLMHTTPAPI interface {
+	LLMApi
+	SetUrl(url string) error
+	GetUrl() (string, error)
+}
